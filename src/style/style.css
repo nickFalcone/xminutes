@@ -1,0 +1,258 @@
+/* ================================= 
+  WEB FONTS
+==================================== */
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700);
+/* ================================= 
+  COLOR PALETTE
+==================================== */
+/* ================================= 
+  ELEMENT STYLES
+==================================== */
+* {
+  box-sizing: border-box; }
+
+body {
+  color: #576366;
+  background: #FFFEFD;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  /* FORM & BUTTON STYLES -------- */
+  /* ================================= 
+    LAYOUT & PAGE STYLES
+  ==================================== */
+  /* IMAGES -------- */
+  /* MAIN NAV -------- */
+  /* COURSE NAV -------- */
+  /* ICONS -------- */
+  /* ================================= 
+    MEDIA QUERIES
+  ==================================== */ }
+  body h1,
+  body h2,
+  body ul {
+    margin: 0;
+    padding: 0; }
+  body h2 {
+    display: none; }
+  body h3 {
+    font-size: 2em; }
+  body p {
+    font-size: 1.3em;
+    text-align: justify; }
+    body p a {
+      text-decoration: underline;
+      color: #2E3263;
+      border: none; }
+  body ul {
+    list-style-type: none; }
+  body hr {
+    border: 0;
+    height: 0;
+    margin: 2.3em 0 2em 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1); }
+  body input,
+  body button {
+    padding: .5em;
+    font-size: .9em;
+    margin-right: 10px;
+    border: none;
+    border-radius: 3px;
+    border: solid 1px #ccc;
+    outline: none; }
+  body button {
+    color: white;
+    background: #4188dc;
+    padding-left: 1em;
+    padding-right: 1em;
+    cursor: pointer;
+    border-color: rgba(0, 0, 0, 0.1); }
+  body .container {
+    width: 100%;
+    max-width: 810px;
+    padding-bottom: 2em;
+    margin: 0 auto;
+    background: #FFFEFD;
+    border-radius: 0em;
+    overflow: hidden; }
+  body header {
+    background: #EDEFF0; }
+  body .main-content {
+    padding: 2em 2em; }
+  body .project {
+    margin: 0 auto;
+    text-align: center; }
+  body .group:after {
+    content: "";
+    display: table;
+    clear: both; }
+  body .course {
+    margin-bottom: 1em; }
+  body .course-img {
+    width: 70px; }
+  body .project-img {
+    border-radius: .3em;
+    width: 70%;
+    transition: ease-in-out 0.1s; }
+  body .project-img:hover {
+    opacity: 0.7; }
+  body .project-title {
+    color: #576366;
+    text-decoration: underline; }
+  body .not-found {
+    text-align: center; }
+  body .main-nav {
+    border-radius: 1em; }
+    body .main-nav a {
+      font-size: 1.2em;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 700;
+      color: black;
+      text-align: center;
+      text-transform: uppercase;
+      display: block;
+      transition: .2s;
+      height: 3em;
+      line-height: 3em;
+      text-decoration: none; }
+      body .main-nav a .linkedin,
+      body .main-nav a .GitHub {
+        margin-top: 0.5em;
+        width: 150px;
+        height: 40px; }
+  body .main-nav a:hover,
+  body .main-nav .active {
+    color: #fff;
+    background: #284B60;
+    border: none; }
+  body .main-nav li {
+    border-bottom: 1px solid #284B60;
+    font-size: 1.2em; }
+  body .course-nav li {
+    display: inline-block; }
+  body .course-nav li + li {
+    margin-left: .6em; }
+  body .course-nav a {
+    font-size: .85em;
+    color: #7d7d7d;
+    padding: .2em .8em;
+    border-radius: .25em;
+    background: #eaebeb;
+    transition: .2s;
+    text-decoration: none; }
+  body .course-nav a:hover,
+  body .course-nav a.active {
+    color: #fff;
+    background: #284B60; }
+  body .icn-logo {
+    background: #284B60;
+    color: #fff; }
+    body .icn-logo i {
+      font-size: 2em;
+      line-height: 1.8em; }
+  @media (min-width: 0) and (max-width: 809px) {
+    body body {
+      padding-top: .8em; }
+    body h2 {
+      text-align: center; }
+    body .group {
+      text-align: justify; }
+    body .project p {
+      margin: 0 auto; }
+    body .icn-logo {
+      display: block;
+      width: 100%;
+      text-align: justify;
+      padding-bottom: 4px; }
+    body .main-nav a {
+      border-top: 2px solid transparent;
+      border-bottom: 2px solid transparent; }
+    body .main-nav a:hover {
+      border-color: rgba(0, 0, 0, 0.1); }
+    body .courses h2 {
+      margin-bottom: 0; }
+    body .course-nav {
+      display: block;
+      margin: 1.5em 0 3.2em; }
+    body input,
+    body button {
+      display: block;
+      width: 100%;
+      margin-bottom: 1em; } }
+  @media (min-width: 810px) {
+    body {
+      /* MAIN NAV -------- */
+      /* COURSE NAV -------- */ }
+      body #root {
+        padding-bottom: 1em; }
+      body .container {
+        margin-top: 1em;
+        width: 100%; }
+      body .group {
+        margin: 0 auto;
+        text-align: justify; }
+      body body {
+        padding-top: 3em; }
+        body body p {
+          font-size: 1.3em; }
+      body .media img,
+      body .media > div,
+      body .project {
+        float: left; }
+      body .media > div {
+        width: 85.1%;
+        margin-left: 1.5em; }
+      body .project {
+        width: 48.73%;
+        margin-bottom: 1.5em; }
+        body .project h3 {
+          font-size: 1.5em; }
+        body .project p {
+          font-size: 1em;
+          margin: 1em; }
+      body .project + .project {
+        margin-left: 2.54%; }
+      body .project:nth-child(2n+3) {
+        clear: left;
+        margin-left: 0; }
+      body .project-img {
+        height: 250px;
+        width: 250px;
+        -moz-box-shadow: 0px 12px 12px #646464;
+        -webkit-box-shadow: 0px 12px 12px #646464;
+        box-shadow: 0px 12px 12px #646464; }
+      body .icn-logo {
+        margin-right: auto;
+        padding: 0 2em; }
+      body header,
+      body .main-nav {
+        -moz-box-shadow: 0px 2px 2px #646464;
+        -webkit-box-shadow: 0px 2px 2px #646464;
+        box-shadow: 0px 2px 2px #646464;
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 5px; }
+      body .main-nav li {
+        font-size: 0.95em;
+        width: 162px;
+        border: none;
+        border-radius: 5px; }
+      body .main-nav a {
+        border-left: 3px solid transparent;
+        border-right: 3px solid transparent;
+        font-size: 0.95em;
+        padding: 1.25em 1.5em;
+        height: 4em;
+        line-height: 1.8em; }
+        body .main-nav a .linkedin,
+        body .main-nav a .GitHub {
+          margin-top: 0;
+          width: 90px;
+          height: 25px; }
+      body .main-nav a:hover {
+        border-color: rgba(0, 0, 0, 0.1); }
+      body .course-nav {
+        float: right; }
+      body .courses h2 {
+        float: left; } }
+
+/*# sourceMappingURL=style.css.map */

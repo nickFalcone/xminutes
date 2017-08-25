@@ -7,7 +7,7 @@ const List = () => {
   let List = ActivityList.map((activity) => {
     return (
       <li className="project slideUp" key={activity.id}>
-        <p>In about {activity.time} minutes, you could {activity.name}</p>
+        <p>In about {activity.time.toFixed()} minutes, you could <a href={activity.url} target="_blank" rel="noopener noreferrer">{activity.name}</a></p>
       </li>
     );
   }); 

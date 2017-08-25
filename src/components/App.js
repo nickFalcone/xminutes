@@ -1,5 +1,5 @@
 import React from 'react';
-import  {
+import {
   BrowserRouter,
   Route,
   Switch,
@@ -13,14 +13,13 @@ import Activities from './Activities';
 const App = () => (
   <BrowserRouter>
     <div className="container">
-      
+
       <Switch>
         <Route exact path='/about' component={About} />
         {/* <Route component={NotFound} /> */}
       </Switch>
       <NavLink to="/about">What's this?</NavLink>
       <Activities />
-
     </div>
   </BrowserRouter>
 );

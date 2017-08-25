@@ -24,34 +24,14 @@ $off-white: #FFFEFD;
 
 body {
   color: $text-grey;
-  // background: $light-blue;
   background: $off-white;
   margin: 0;
   font-family: 'Roboto', sans-serif;
-  h1,
-  h2,
-  ul {
-    margin: 0;
-    padding: 0;
-}
-h2 {
-  display: none;
-  // color: $dark-blue;
-  // font-size: 1.6em;
-  // margin-bottom: 1.25em;
-  // text-align: center;
-}
-
-h3 {
-  font-size: 2em;
-}
 
 p {
-  font-size: 1.3em;
-  text-align: justify;
+  font-size: 2em;
   a {
     text-decoration: underline;
-    color: #2E3263;
     border: none;
   }
 }
@@ -69,23 +49,30 @@ hr {
 
 /* FORM & BUTTON STYLES -------- */
 
-input,
-button {
+input {
   padding: .5em;
-  font-size: .9em;
-  margin-right: 10px;
+  width: 75px;
+  text-align: center;
+  font-size: 2em;
   border: none;
   border-radius: 3px;
   border: solid 1px #ccc;
   outline: none;
 }
-button {
-  color: white;
-  background: #4188dc;
-  padding-left: 1em;
-  padding-right: 1em;
-  cursor: pointer;
-  border-color: rgba(0,0,0, .1);
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.prompt {
+  font-size: 2em;
+}
+
+form {
+  margin-top: 2em;
+  text-align: center;
 }
 
 /* ================================= 
@@ -109,115 +96,88 @@ header {
   padding: 2em 2em;
 }
 
-.project {
-  margin: 0 auto;
-  text-align: center;
-}
-
 .group:after {
   content: "";
   display: table;
   clear: both;
 }
-.course {
-  margin-bottom: 1em;
+
+/* CLOCK ----------- */
+
+.hero-circle {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  position: relative;
+  border: 6px solid black;
+  border-radius: 50%;
+  -moz-box-shadow: 0px 12px 12px rgb(100,100,100);
+  -webkit-box-shadow: 0px 12px 12px rgb(100,100,100);
+  box-shadow: 0px 12px 12px rgb(100,100,100);
 }
 
-/* IMAGES -------- */
-
-.course-img {
-  width: 70px;
-}
-.project-img {
-  border-radius: .3em;
-  width: 70%;
-  transition: ease-in-out 0.1s;
+.hero-face {
+  width: 100%;
+  height: 100%;
 }
 
-.project-img:hover {
-  opacity: 0.7;
-}
-
-.project-title {
-  color: $text-grey;
-  text-decoration: underline;
-}
-
-
-.not-found {
-  text-align: center;
-}
-
-/* MAIN NAV -------- */
-
-.main-nav {
-  border-radius: 1em;
-
-  a {
-  font-size: 1.2em;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700;
-  color: black;
-  text-align: center;
-  text-transform: uppercase;
+.hero-face:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  margin: -6px 0 0 -6px;
+  background: black;
+  border-radius: 6px;
+  content: "";
   display: block;
-  transition: .2s;
-  height: 3em;
-  line-height: 3em;
-  text-decoration: none;
-    .linkedin,
-    .GitHub {
-      margin-top: 0.5em;
-      width: 150px;
-      height: 40px;
-    }
-  }
-}
-.main-nav a:hover,
-.main-nav .active {
-  color: #fff;
-  background: $dark-blue;
-  border: none;
 }
 
-.main-nav li {
-  border-bottom: 1px solid $dark-blue;
-  font-size: 1.2em;
+.hero-hour {
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -4px 0 -4px -25%;
+  padding: 4px 0 4px 25%;
+  background: black;
+  -webkit-transform-origin: 100% 50%;
+  -ms-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  border-radius: 4px 0 0 4px;
 }
 
-/* COURSE NAV -------- */
-
-.course-nav li {
-  display: inline-block;
-}
-.course-nav li + li {
-  margin-left: .6em;
-}
-.course-nav a {
-  font-size: .85em;
-  color: #7d7d7d;
-  padding: .2em .8em;
-  border-radius: .25em;
-  background: #eaebeb;
-  transition: .2s;
-  text-decoration: none;
-}
-.course-nav a:hover,
-.course-nav a.active {
-  color: #fff;
-  background: $dark-blue;
+.hero-minute {
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -40% -3px 0;
+  padding: 40% 3px 0;
+  background: black;
+  -webkit-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  border-radius: 3px 3px 0 0;
 }
 
-/* ICONS -------- */
-
-.icn-logo {
-  background: $dark-blue;
-  color: #fff;
-  i {
-    font-size: 2em;
-    line-height: 1.8em;
-  }
+.hero-second {
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -40% -1px 0 0;
+  padding: 40% 1px 0;
+  background: black;
+  -webkit-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
 }
+
 
 /* ================================= 
   MEDIA QUERIES
@@ -227,52 +187,23 @@ header {
 
   body {
     padding-top: .8em;
-  }
+    
+    h2 {
+      text-align: center;
+    }
 
-  h2 {
-    text-align: center;
-  }
-
-  .group {
-    text-align: justify;
-  }
-
-  .project {
-    p {
-      margin: 0 auto;    
+    .group {
+      text-align: justify;
+    }
+    
+    input {
+      display: block;
+      width: 100%;
+      margin-bottom: 1em;
     }
   }
-
-   .icn-logo {
-     display: block;
-     width: 100%;
-     text-align: justify;
-     padding-bottom: 4px;
-   }
-
-   .main-nav a {
-     border-top: 2px solid transparent;
-     border-bottom: 2px solid transparent;
-   }
-   .main-nav a:hover {
-     border-color: rgba(0,0,0, .1);
-   }
-   .courses h2 {
-     margin-bottom: 0;
-   }
-   .course-nav {
-     display: block;
-     margin: 1.5em 0 3.2em;
-   }
-   
-   input,
-   button {
-     display: block;
-     width: 100%;
-     margin-bottom: 1em;
-   }
 }
-@media (min-width: 810px) {
+  @media (min-width: 810px) {
 
   #root {
     padding-bottom: 1em;
@@ -281,7 +212,6 @@ header {
   .container {
     margin-top: 1em;
     width: 100%;
-    // border-radius: .5em;
   }
 
   .group {
@@ -289,19 +219,6 @@ header {
     text-align: justify;
   }
 
-  body {
-    padding-top: 3em;
-
-    
-
-  p {
-    font-size: 1.3em;
-  }
-
-  }
-
-  .media img,
-  .media > div,
   .project {
     float: left;
   }
@@ -311,7 +228,7 @@ header {
   } 
   .project {
     width: 48.73%;
-    margin-bottom: 1.5em;
+    margin-bottom: 1em;
     h3 {
       font-size: 1.5em;
     }
@@ -328,62 +245,5 @@ header {
     margin-left: 0;
   }
 
-  .project-img {
-    height: 250px;
-    width: 250px;
-    -moz-box-shadow: 0px 12px 12px rgb(100,100,100);
-    -webkit-box-shadow: 0px 12px 12px rgb(100,100,100);
-    box-shadow: 0px 12px 12px rgb(100,100,100);
-  }
-
-
-  /* MAIN NAV -------- */
-  .icn-logo {
-    margin-right: auto;
-    padding: 0 2em;
-  }
-  header,
-  .main-nav {
-    -moz-box-shadow: 0px 2px 2px rgb(100,100,100);
-    -webkit-box-shadow: 0px 2px 2px rgb(100,100,100);
-    box-shadow: 0px 2px 2px rgb(100,100,100);
-    display: flex;
-    flex-wrap: wrap;
-    border-radius: 5px;
-  }
-
-  .main-nav li {
-    font-size: 0.95em;
-    width: 162px;
-    border: none;
-    border-radius: 5px;
-    // background-color: $pale-grey;
-  }
-
-  .main-nav a {
-    border-left: 3px solid transparent;
-    border-right: 3px solid transparent;
-    font-size: 0.95em;
-    padding: 1.25em 1.5em;
-    height: 4em;
-    line-height: 1.8em;
-
-    .linkedin,
-    .GitHub {
-      margin-top: 0;
-      width: 90px;
-      height: 25px;
-    }
-  }
-  .main-nav a:hover {
-    border-color: rgba(0,0,0, .1);
-  }
-  /* COURSE NAV -------- */
-  .course-nav {
-    float: right;
-  } 
-  .courses h2 {
-    float: left;
-  }
 }
 }

@@ -1,12 +1,12 @@
 import React from 'react';
 import  {
   BrowserRouter,
-  // Route,
-  Switch
+  Route,
+  Switch,
+  NavLink
 } from 'react-router-dom';
 
-// App components
-// import Header from './Header';
+import About from './About';
 import Activities from './Activities';
 // import NotFound from './NotFound';
 
@@ -15,17 +15,10 @@ const App = () => (
     <div className="container">
       
       <Switch>
-        {/*
-          switch only renders the first route that matches the URL
-          stops searching after found
-          if none found, fallback to NotFound component
-        */}
-        {/* <Route exact path='/' component={Home} />
-        <Route exact path='/projects' component={Projects} />
-        <Route path='/skills' component={Skills} />
-        <Route component={NotFound} /> */}
+        <Route exact path='/about' component={About} />
+        {/* <Route component={NotFound} /> */}
       </Switch>
-      
+      <NavLink to="/about">What's this?</NavLink>
       <Activities />
 
     </div>

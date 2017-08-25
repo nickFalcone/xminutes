@@ -10,9 +10,9 @@
 
 $dark-blue: #284B60;
 $light-blue: #3B5C70;
-$text-grey: #576366;
+$text-grey: #3F4343;
 $pale-grey: #EDEFF0;
-$off-white: #FFFEFD;
+$background-grey: #E9E9E9;
 
 /* ================================= 
   ELEMENT STYLES
@@ -24,9 +24,11 @@ $off-white: #FFFEFD;
 
 body {
   color: $text-grey;
-  background: $off-white;
+  background: $background-grey;
   margin: 0;
   font-family: 'Roboto', sans-serif;
+  ::-moz-selection { background: rgba(255, 231, 0, 0.58); }
+  ::selection { background: rgba(255, 231, 0, 0.58); }
 
 p {
   font-size: 2em;
@@ -50,14 +52,20 @@ hr {
 /* FORM & BUTTON STYLES -------- */
 
 input {
-  padding: .5em;
-  width: 75px;
+  margin-bottom: 1em;
+  width: 50px;
   text-align: center;
   font-size: 2em;
   border: none;
-  border-radius: 3px;
-  border: solid 1px #ccc;
+  background-color: inherit;
   outline: none;
+  border-bottom: 2px solid black
+  // transition: ease-in-out 0.5s;
+  // &:hover {
+  //   background-color: white;
+  //   border-radius: 50%;
+  //   border: 2px solid black;
+  // }
 }
 
 input[type=number]::-webkit-inner-spin-button, 
@@ -65,6 +73,8 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none; 
   margin: 0; 
 }
+
+
 
 .prompt {
   font-size: 2em;
@@ -84,7 +94,7 @@ form {
   max-width: 810px;
   padding-bottom: 2em;
   margin: 0 auto;
-  background: $off-white;
+  background: $background-grey;
   border-radius: 0em;
   // box-shadow: 0 3px rgba(0,0,0, .1);
   overflow: hidden;
@@ -105,15 +115,16 @@ header {
 /* CLOCK ----------- */
 
 .hero-circle {
+  background-color: white;
   width: 200px;
   height: 200px;
   margin: 0 auto;
   position: relative;
-  border: 6px solid black;
+  border: 3px solid black;
   border-radius: 50%;
-  -moz-box-shadow: 0px 12px 12px rgb(100,100,100);
-  -webkit-box-shadow: 0px 12px 12px rgb(100,100,100);
-  box-shadow: 0px 12px 12px rgb(100,100,100);
+  -moz-box-shadow: 0px 10px 24px rgb(100,100,100);
+  -webkit-box-shadow: 0px 10px 24px rgb(100,100,100);
+  box-shadow: 0px 10px 24px rgb(100,100,100);
 }
 
 .hero-face {
@@ -140,8 +151,8 @@ header {
   position: absolute;
   top: 50%;
   left: 50%;
-  margin: -4px 0 -4px -25%;
-  padding: 4px 0 4px 25%;
+  margin: -3px 0 -3px -25%;
+  padding: 3px 0 3px 25%;
   background: black;
   -webkit-transform-origin: 100% 50%;
   -ms-transform-origin: 100% 50%;
@@ -199,7 +210,7 @@ header {
     input {
       display: block;
       width: 100%;
-      margin-bottom: 1em;
+      padding-bottom: 1em;
     }
   }
 }
@@ -236,6 +247,9 @@ header {
       font-size: 1em;
       margin: 1em;
     }
+    border: 1px solid $text-grey;
+    border-radius: 5px;
+    background-color: white;
   }
   .project + .project {
     margin-left: 2.54%;

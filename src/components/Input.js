@@ -36,7 +36,7 @@ const FormComponent = createReactClass({
           <FormControl
             type="number"
             value={this.state.value}
-            placeholder="5"
+            placeholder="x"
             maxLength={2}
             onChange={this.handleChange}
           />

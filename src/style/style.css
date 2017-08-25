@@ -12,8 +12,8 @@
   box-sizing: border-box; }
 
 body {
-  color: #576366;
-  background: #FFFEFD;
+  color: #3F4343;
+  background: #E9E9E9;
   margin: 0;
   font-family: 'Roboto', sans-serif;
   /* FORM & BUTTON STYLES -------- */
@@ -24,6 +24,10 @@ body {
   /* ================================= 
     MEDIA QUERIES
   ==================================== */ }
+  body ::-moz-selection {
+    background: rgba(255, 231, 0, 0.58); }
+  body ::selection {
+    background: rgba(255, 231, 0, 0.58); }
   body p {
     font-size: 2em; }
     body p a {
@@ -37,14 +41,14 @@ body {
     margin: 2.3em 0 2em 0;
     border-top: 1px solid rgba(0, 0, 0, 0.1); }
   body input {
-    padding: .5em;
-    width: 75px;
+    margin-bottom: 1em;
+    width: 50px;
     text-align: center;
     font-size: 2em;
     border: none;
-    border-radius: 3px;
-    border: solid 1px #ccc;
-    outline: none; }
+    background-color: inherit;
+    outline: none;
+    border-bottom: 2px solid black; }
   body input[type=number]::-webkit-inner-spin-button,
   body input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
@@ -59,7 +63,7 @@ body {
     max-width: 810px;
     padding-bottom: 2em;
     margin: 0 auto;
-    background: #FFFEFD;
+    background: #E9E9E9;
     border-radius: 0em;
     overflow: hidden; }
   body header {
@@ -71,15 +75,16 @@ body {
     display: table;
     clear: both; }
   body .hero-circle {
+    background-color: white;
     width: 200px;
     height: 200px;
     margin: 0 auto;
     position: relative;
-    border: 6px solid black;
+    border: 3px solid black;
     border-radius: 50%;
-    -moz-box-shadow: 0px 12px 12px #646464;
-    -webkit-box-shadow: 0px 12px 12px #646464;
-    box-shadow: 0px 12px 12px #646464; }
+    -moz-box-shadow: 0px 10px 24px #646464;
+    -webkit-box-shadow: 0px 10px 24px #646464;
+    box-shadow: 0px 10px 24px #646464; }
   body .hero-face {
     width: 100%;
     height: 100%; }
@@ -100,8 +105,8 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    margin: -4px 0 -4px -25%;
-    padding: 4px 0 4px 25%;
+    margin: -3px 0 -3px -25%;
+    padding: 3px 0 3px 25%;
     background: black;
     -webkit-transform-origin: 100% 50%;
     -ms-transform-origin: 100% 50%;
@@ -142,7 +147,7 @@ body {
       body body input {
         display: block;
         width: 100%;
-        margin-bottom: 1em; } }
+        padding-bottom: 1em; } }
   @media (min-width: 810px) {
     body #root {
       padding-bottom: 1em; }
@@ -159,7 +164,10 @@ body {
       margin-left: 1.5em; }
     body .project {
       width: 48.73%;
-      margin-bottom: 1em; }
+      margin-bottom: 1em;
+      border: 1px solid #3F4343;
+      border-radius: 5px;
+      background-color: white; }
       body .project h3 {
         font-size: 1.5em; }
       body .project p {

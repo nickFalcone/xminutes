@@ -17,8 +17,8 @@ const ActivityList = [
     id: 2,
   },
   {
-    name: "walk the dog",
-    time: 14,
+    name: "Go running",
+    time: 45,
     url: "#",
     productive: true,
     id: 3,
